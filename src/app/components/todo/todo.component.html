@@ -1,0 +1,11 @@
+<div>
+  <h4>Input to change the vlaue</h4>
+  <app-add-todo></app-add-todo>
+</div>
+<div class="form-group">
+  <ul *ngFor="let item of todos; let i=index" class="myul">
+    <li class="myli">{{item.title}}
+      <span (click)="TodoRem(i)" class="corss">X</span>
+    </li>
+  </ul>
+</div>

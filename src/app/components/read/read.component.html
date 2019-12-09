@@ -1,0 +1,13 @@
+<div class="right" *ngIf="tutorials">
+  <h3>Tutorial</h3>
+    <ul>
+      <li *ngFor="let tut of tutorials| async ; let i=index" >
+        <a [href]="tut.url" target="blank">{{tut.name}}</a>
+      </li>
+    </ul>
+</div>
+<div class="left">
+    <input type="text " placeholder="name" #name>
+    <input type="text " placeholder="name" #url>
+    <button (click)="AddTutorila(name.value,url.value)">ADD</button>
+</div>
